@@ -1,0 +1,43 @@
+package GuessingGame;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class GuessingGame {
+
+    public static void main(String[] args) {
+        System.out.println(STR."Working Directory:\{System.getProperty("user.dir")}");  // Display the current working directory
+        System.out.println("Programmer: Celina Nunez");                                 // Display the programmer's name
+        SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy @ HH:mm"); // Create a date formatter for the current date and time
+        Date date = new Date();                                                          // Get the current date and time
+        System.out.println(STR."Java CapStone Project \{formatter.format(date)}");                  // Display the program and date information
+
+
+        int secretNum;
+        int guess;
+        boolean correct = false;
+
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("\nGIVE ME A SECRET NUMBER: ");
+        secretNum = keyboard.nextInt();
+
+        while (!correct) {
+
+            System.out.print("GUESS: ");
+            guess = keyboard.nextInt();
+
+            if (guess == secretNum) {
+                correct = true;
+                System.out.println("You are right!");
+            }
+            else if (guess < secretNum) {
+                System.out.println("HIGHER");
+            }
+            else {
+                System.out.println("LOWER");
+             }
+        }
+    }
+}
