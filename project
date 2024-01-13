@@ -1,4 +1,4 @@
-package GuessingGame;
+Spackage GuessingGame;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,7 +20,7 @@ public class GuessingGame {
 
         Scanner keyboard = new Scanner(System.in);
 
-        System.out.print("\nGIVE ME A SECRET NUMBER: ");
+        System.out.print("\nGUESS MY AGE: ");
         secretNum = keyboard.nextInt();
 
         while (!correct) {
@@ -33,10 +33,10 @@ public class GuessingGame {
                 System.out.println("You are right!");
             }
             else if (guess < secretNum) {
-                System.out.println("HIGHER");
+                System.out.println("My age is older than that.");
             }
             else {
-                System.out.println("LOWER");
+                System.out.println("My age is younger than that.");
              }
         }
     }
